@@ -1,0 +1,281 @@
+[33mcommit 501c0c8a6b008958ef7eb4150c1a0df4376fe056[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Alex <59027586+AlexanderMakunin@users.noreply.github.com>
+Date:   Mon Dec 2 16:49:29 2024 +0100
+
+    cambios
+
+[1mdiff --git a/src/App.java b/src/App.java[m
+[1mindex fe4b3c7..eeab96b 100644[m
+[1m--- a/src/App.java[m
+[1m+++ b/src/App.java[m
+[36m@@ -7,7 +7,8 @@[m [mpublic class App {[m
+         Scanner scanner = new Scanner(System.in);[m
+         int option;[m
+         do {[m
+[31m-            System.out.println("Calculadora de Área - Seleccione una opción:");[m
+[32m+[m[32m            System.out.println("Calculadora de Área by Alexander Makunin");[m
+[32m+[m[32m            System.out.println("Selecciona una opción:");[m
+             System.out.println("1. Círculo");[m
+             System.out.println("2. Cuadrado");[m
+             System.out.println("3. Triángulo");[m
+
+[33mcommit 40adedb1e9ef69b4e883c115eb47f43ce4dfe659[m
+Author: Alex <59027586+AlexanderMakunin@users.noreply.github.com>
+Date:   Mon Dec 2 16:22:16 2024 +0100
+
+    Proyecto Calcular Area
+
+[1mdiff --git a/.vscode/settings.json b/.vscode/settings.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e112a70[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/settings.json[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m    "java.project.sourcePaths": ["src"],[m
+[32m+[m[32m    "java.project.outputPath": "bin",[m
+[32m+[m[32m    "java.project.referencedLibraries": [[m
+[32m+[m[32m        "lib/**/*.jar"[m
+[32m+[m[32m    ][m
+[32m+[m[32m}[m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7c03a53[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32m## Getting Started[m
+[32m+[m
+[32m+[m[32mWelcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.[m
+[32m+[m
+[32m+[m[32m## Folder Structure[m
+[32m+[m
+[32m+[m[32mThe workspace contains two folders by default, where:[m
+[32m+[m
+[32m+[m[32m- `src`: the folder to maintain sources[m
+[32m+[m[32m- `lib`: the folder to maintain dependencies[m
+[32m+[m
+[32m+[m[32mMeanwhile, the compiled output files will be generated in the `bin` folder by default.[m
+[32m+[m
+[32m+[m[32m> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.[m
+[32m+[m
+[32m+[m[32m## Dependency Management[m
+[32m+[m
+[32m+[m[32mThe `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).[m
+[1mdiff --git a/bin/App.class b/bin/App.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2f425e7[m
+Binary files /dev/null and b/bin/App.class differ
+[1mdiff --git a/bin/Circle.class b/bin/Circle.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c5a756b[m
+Binary files /dev/null and b/bin/Circle.class differ
+[1mdiff --git a/bin/Pentagon.class b/bin/Pentagon.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5a3dcc6[m
+Binary files /dev/null and b/bin/Pentagon.class differ
+[1mdiff --git a/bin/Rectangle.class b/bin/Rectangle.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3876ded[m
+Binary files /dev/null and b/bin/Rectangle.class differ
+[1mdiff --git a/bin/Square.class b/bin/Square.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5f098ff[m
+Binary files /dev/null and b/bin/Square.class differ
+[1mdiff --git a/bin/Trapecio.class b/bin/Trapecio.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d97c97a[m
+Binary files /dev/null and b/bin/Trapecio.class differ
+[1mdiff --git a/bin/Triangle.class b/bin/Triangle.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d4fae0d[m
+Binary files /dev/null and b/bin/Triangle.class differ
+[1mdiff --git a/src/App.java b/src/App.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fe4b3c7[m
+[1m--- /dev/null[m
+[1m+++ b/src/App.java[m
+[36m@@ -0,0 +1,47 @@[m
+[32m+[m[32m//package figuras;[m
+[32m+[m
+[32m+[m[32mimport java.util.Scanner;[m
+[32m+[m
+[32m+[m[32mpublic class App {[m
+[32m+[m[32m    public static void main(String[] args) throws Exception {[m
+[32m+[m[32m        Scanner scanner = new Scanner(System.in);[m
+[32m+[m[32m        int option;[m
+[32m+[m[32m        do {[m
+[32m+[m[32m            System.out.println("Calculadora de Área - Seleccione una opción:");[m
+[32m+[m[32m            System.out.println("1. Círculo");[m
+[32m+[m[32m            System.out.println("2. Cuadrado");[m
+[32m+[m[32m            System.out.println("3. Triángulo");[m
+[32m+[m[32m            System.out.println("4. Rectángulo");[m
+[32m+[m[32m            System.out.println("5. Pentágono");[m
+[32m+[m[32m            System.out.println("6. Trapecio");[m
+[32m+[m[32m            System.out.println("0. Salir");[m
+[32m+[m[32m            System.out.print("Opción: ");[m
+[32m+[m[32m            option = scanner.nextInt();[m
+[32m+[m[32m            switch (option) {[m
+[32m+[m[32m                case 1:[m
+[32m+[m[32m                    Circle.calculateArea();[m
+[32m+[m[32m                    break;[m
+[32m+[m[32m                case 2:[m
+[32m+[m[32m                    Square.calculateArea();[m
+[32m+[m[32m                    break;[m
+[32m+[m[32m                case 3:[m
+[32m+[m[32m                    Triangle.calculateArea();[m
+[32m+[m[32m                    break;[m
+[32m+[m[32m                case 4:[m
+[32m+[m[32m                    Rectangle.calculateArea();[m
+[32m+[m[32m                    break;[m
+[32m+[m[32m                case 5:[m
+[32m+[m[32m                    Pentagon.calculateArea();[m
+[32m+[m[32m                    break;[m
+[32m+[m[32m                case 6:[m
+[32m+[m[32m                    Trapecio.calculateArea();[m
+[32m+[m[32m                    break;[m
+[32m+[m[32m                case 0:[m
+[32m+[m[32m                    System.out.println("Saliendo...");[m
+[32m+[m[32m                    break;[m
+[32m+[m[32m                default:[m
+[32m+[m[32m                    System.out.println("Opción no válida");[m
+[32m+[m[32m            }[m
+[32m+[m[32m        } while (option != 0);[m
+[32m+[m[32m        scanner.close();    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/src/Circle.java b/src/Circle.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a4ab4ff[m
+[1m--- /dev/null[m
+[1m+++ b/src/Circle.java[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m// Circle.java[m
+[32m+[m[32m//package figuras;[m
+[32m+[m
+[32m+[m[32mimport java.util.Scanner;[m
+[32m+[m
+[32m+[m[32mpublic class Circle {[m
+[32m+[m[32m    public static void calculateArea() {[m
+[32m+[m[32m        Scanner scanner = new Scanner(System.in);[m
+[32m+[m[32m        System.out.print("Ingrese el radio del círculo: ");[m
+[32m+[m[32m        double radius = scanner.nextDouble();[m
+[32m+[m[32m        double area = Math.PI * radius * radius;[m
+[32m+[m[32m        System.out.println("El área del círculo es: " + area);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/src/Pentagon.java b/src/Pentagon.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f6c028b[m
+[1m--- /dev/null[m
+[1m+++ b/src/Pentagon.java[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m// Pentagon.java[m
+[32m+[m[32m//package figuras;[m
+[32m+[m
+[32m+[m[32mimport java.util.Scanner;[m
+[32m+[m
+[32m+[m[32mpublic class Pentagon {[m
+[32m+[m[32m    public static void calculateArea() {[m
+[32m+[m[32m        Scanner scanner = new Scanner(System.in);[m
+[32m+[m[32m        System.out.print("Ingrese el lado del pentágono: ");[m
+[32m+[m[32m        double side = scanner.nextDouble();[m
+[32m+[m[32m        System.out.print("Ingrese la apotema del pentágono: ");[m
+[32m+[m[32m        double apothem = scanner.nextDouble();[m
+[32m+[m[32m        double area = 0.5 * 5 * side * apothem;[m
+[32m+[m[32m        System.out.println("El área del pentágono es: " + area);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/src/Rectangle.java b/src/Rectangle.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7b3df59[m
+[1m--- /dev/null[m
+[1m+++ b/src/Rectangle.java[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m// Rectangle.java[m
+[32m+[m[32m//package figuras;[m
+[32m+[m
+[32m+[m[32mimport java.util.Scanner;[m
+[32m+[m
+[32m+[m[32mpublic class Rectangle {[m
+[32m+[m[32m    public static void calculateArea() {[m
+[32m+[m[32m        Scanner scanner = new Scanner(System.in);[m
+[32m+[m[32m        System.out.print("Ingrese la base del rectángulo: ");[m
+[32m+[m[32m        double base = scanner.nextDouble();[m
+[32m+[m[32m        System.out.print("Ingrese la altura del rectángulo: ");[m
+[32m+[m[32m        double height = scanner.nextDouble();[m
+[32m+[m[32m        double area = base * height;[m
+[32m+[m[32m        System.out.println("El área del rectángulo es: " + area);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/src/Square.java b/src/Square.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..20c989a[m
+[1m--- /dev/null[m
+[1m+++ b/src/Square.java[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m// Square.java[m
+[32m+[m[32m//package figuras;[m
+[32m+[m
+[32m+[m[32mimport java.util.Scanner;[m
+[32m+[m
+[32m+[m[32mpublic class Square {[m
+[32m+[m[32m    public static void calculateArea() {[m
+[32m+[m[32m        Scanner scanner = new Scanner(System.in);[m
+[32m+[m[32m        System.out.print("Ingrese el lado del cuadrado: ");[m
+[32m+[m[32m        double side = scanner.nextDouble();[m
+[32m+[m[32m        double area = side * side;[m
+[32m+[m[32m        System.out.println("El área del cuadrado es: " + area);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/src/Trapecio.java b/src/Trapecio.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..11f58cd[m
+[1m--- /dev/null[m
+[1m+++ b/src/Trapecio.java[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32m// Trapecio.java[m
+[32m+[m[32m//package figuras;[m
+[32m+[m
+[32m+[m[32mimport java.util.Scanner;[m
+[32m+[m
+[32m+[m[32mpublic class Trapecio {[m
+[32m+[m[32m    public static void calculateArea() {[m
+[32m+[m[32m        Scanner scanner = new Scanner(System.in);[m
+[32m+[m[32m        System.out.print("Ingrese la base del Trapecio menor: ");[m
+[32m+[m[32m        double baseMenor = scanner.nextDouble();[m
+[32m+[m[32m        System.out.print("Ingrese la base del Trapecio Mayor: ");[m
+[32m+[m[32m        double baseMayor = scanner.nextDouble();[m
+[32m+[m[32m        System.out.print("Ingrese la altura del Trapecio: ");[m
+[32m+[m[32m        double height = scanner.nextDouble();[m
+[32m+[m[32m        double area = baseMenor + baseMayor / 2 * height;[m
+[32m+[m[32m        System.out.println("El área del Trapecio es: " + area);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/src/Triangle.java b/src/Triangle.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..656a39c[m
+[1m--- /dev/null[m
+[1m+++ b/src/Triangle.java[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m// Triangle.java[m
+[32m+[m[32m//package figuras;[m
+[32m+[m
+[32m+[m[32mimport java.util.Scanner;[m
+[32m+[m
+[32m+[m[32mpublic class Triangle {[m
+[32m+[m[32m    public static void calculateArea() {[m
+[32m+[m[32m        Scanner scanner = new Scanner(System.in);[m
+[32m+[m[32m        System.out.print("Ingrese la base del triángulo: ");[m
+[32m+[m[32m        double base = scanner.nextDouble();[m
+[32m+[m[32m        System.out.print("Ingrese la altura del triángulo: ");[m
+[32m+[m[32m        double height = scanner.nextDouble();[m
+[32m+[m[32m        double area = 0.5 * base * height;[m
+[32m+[m[32m        System.out.println("El área del triángulo es: " + area);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
